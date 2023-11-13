@@ -75,6 +75,7 @@ body {
 .sidebar span {
     margin-left: 0.5;
     color: var(--success);
+    padding-left: 0.5rem;
 }
 
 .sidebar .side-menu {
@@ -163,7 +164,7 @@ body {
 }
 
 .content nav form {
-    max-width: 850px;
+    max-width: 850px; /*600px*/
     width: 100%;
     height: auto;
 }
@@ -186,7 +187,6 @@ body {
     width: 100%;
     font-family: inherit;
 }
-
 
 .content nav form .form-input button {
     width: 80px;
@@ -225,5 +225,102 @@ body {
     font-size: 12px;
     display: flex;
     justify-content: center;
-
 }
+/*Content Ends*/
+
+/*Main Start*/
+main {
+    width: 100%;
+    padding: 2.2rem 1rem;
+    max-height: calc(100vh - 65px);
+}
+
+main .header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--dark);
+}
+
+main .breadcrumb {
+    display: flex;
+    align-items: center;
+    grid-gap: 1.2rem;
+}
+
+/* main .breadcrumb li {
+    color: var(--dark);
+} */
+
+main .breadcrumb li a {
+    color: var(--dark);
+    pointer-events: none;
+}
+
+main .breadcrumb li a.active {
+    color: var(--success);
+}
+
+main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 0fr));
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+main .cards li {
+    padding: 1.5rem;
+    background-color: var(--light);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+main .cards li:hover {
+    transform: translateY(-10px);
+}
+
+main .cards li .bx {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+main .cards li:nth-child(1) .bx {
+    background-color: var(--light-primary);
+    color: var(--primary);
+}
+
+main .cards li:nth-child(2) .bx {
+    background-color: var(--light-warning);
+    color: var(--warning);
+}
+
+main .cards li:nth-child(3) .bx {
+    background-color: var(--light-danger);
+    color: var(--danger);
+}
+
+main .cards li:nth-child(4) .bx {
+    background-color: var(--light-success);
+    color: var(--success);
+}
+
+main .cards li .info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+main .cards li .info p {
+    color: var(--dark);
+}
+
+/*Main End*/
