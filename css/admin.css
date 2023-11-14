@@ -61,6 +61,7 @@ body {
   overflow-x: hidden; /*hides horizontal overflow, preventing content from being visible outside the element's box along the x-axis.*/
   scrollbar-width: none;
   box-shadow: 02px 0 10px var(--grey);
+  transition: all 0.3s ease-in;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -123,7 +124,7 @@ body {
 }
 
 .side-menu li a.logout {
-  color: var(--success);
+  color: var(--danger);
 }
 
 /*Content Start*/
@@ -419,10 +420,10 @@ main .bottom_data .orders table td {
   background-color: var(--primary);
 }
 
-/* main .bottom_data .reminders {
+main .bottom_data .reminders {
   flex-grow: 0.2;
   flex-basis: 300px;
-} */
+}
 
 main .bottom_data .reminders .task_list {
   width: 100%;
@@ -439,4 +440,70 @@ main .bottom_data .reminders .task_list li {
   justify-content: space-between;
 }
 
+main .bottom_data .reminders .task_list li .task_title {
+  display: flex;
+  align-items: center;
+}
+
+main .bottom_data .reminders .task_list li .task_title p {
+  margin-left: 6px;
+}
+
+main .bottom_data .reminders .task_list li .bx {
+  cursor: pointer;
+}
+
+main .bottom_data .reminders .task_list li.completed {
+  border-left: 5px solid var(--success);
+}
+
+main .bottom_data .reminders .task_list li.uncomplete {
+  border-left: 5px solid var(--danger);
+}
 /*Order Details Stop*/
+
+/*Responsiveness*/
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .content {
+    width: calc(100% - 60px);
+    left: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content nav form .form-input input {
+    display: none;
+  }
+  .content nav form .form-input button {
+    background-color: var(--dark-grey);
+  }
+  .content nav form .form-input input {
+    width: 100%;
+    display: block;
+  }
+  .content nav form.show .form-input button {
+    width: 36px;
+    height: 100%;
+    color: var(--light);
+    background-color: var(--dark);
+    border-radius: 0 36px 36px 0;
+  }
+  .content nav form.show ~ .notification {
+    display: none;
+  }
+  main .cards {
+    grid-template-columns: 0fr;
+  }
+  main .bottom_data .header {
+    min-width: 340px;
+  }
+  main .bottom_data .orders table {
+    min-width: 340px;
+  }
+  main .bottom_data .reminders .task_list {
+    min-width: 340px;
+  }
+}
