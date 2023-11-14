@@ -1,2 +1,3 @@
 # Dashboard
-A responsive admin dashboared created with HTML, CSS and Javascript.
+
+A responsive admin dashboard created with HTML, CSS and Javascript.

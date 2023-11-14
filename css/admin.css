@@ -1,251 +1,250 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
 :root {
-    /*Variables with different colors from the details.md file*/
---light: #f6f6f9;
---primary: #1976d2;
---light-primary: #cfe8ff;
---grey: #eee;
---dark-grey: #aaaaaa;
---dark: #363949;
---danger: #d32f2f;
---light-danger: #fecdd3;
---warning: #fbc02d;
---light-warning: #fff2c6;
---success: #388e3c;
---light-success: #bbf7d0;
+  /*Variables with different colors from the details.md file*/
+  --light: #f6f6f9;
+  --primary: #1976d2;
+  --light-primary: #cfe8ff;
+  --grey: #eee;
+  --dark-grey: #aaaaaa;
+  --dark: #363949;
+  --danger: #d32f2f;
+  --light-danger: #fecdd3;
+  --warning: #fbc02d;
+  --light-warning: #fff2c6;
+  --success: #388e3c;
+  --light-success: #bbf7d0;
 }
 
 /*Style Properties*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "poppins", sans-serif; /*sans0serif is an alternative*/
+  font-family: "poppins", sans-serif; /*sans0serif is an alternative*/
 }
 
 .bx {
-    font-size: 1.7rem;
+  font-size: 1.7rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 /*Utality Classes start*/
 body.dark {
-    --light: #181a1e;
-    --grey: #25252c;
-    --dark: #fbfbfb;
+  --light: #181a1e;
+  --grey: #25252c;
+  --dark: #fbfbfb;
 }
 
 body {
-    background-color: var(--grey);
-    overflow-x: hidden;
+  background-color: var(--grey);
+  overflow-x: hidden;
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--light);
-     width: 260px;
-    height: 100%; 
-    z-index: 2; /*sets the stacking order of elements along the z-axis*/
-    overflow-x: hidden;/*hides horizontal overflow, preventing content from being visible outside the element's box along the x-axis.*/
-    scrollbar-width: none;
-    box-shadow: 02px 0 10px var(--grey);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--light);
+  width: 260px;
+  height: 100%;
+  z-index: 2; /*sets the stacking order of elements along the z-axis*/
+  overflow-x: hidden; /*hides horizontal overflow, preventing content from being visible outside the element's box along the x-axis.*/
+  scrollbar-width: none;
+  box-shadow: 02px 0 10px var(--grey);
 }
 
 .sidebar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .sidebar.close {
-    width: 60px;
+  width: 60px;
 }
 
-
 .sidebar span {
-    margin-left: 0.5;
-    color: var(--success);
-    padding-left: 0.5rem;
+  margin-left: 0.5;
+  color: var(--success);
+  padding-left: 0.5rem;
 }
 
 .sidebar .side-menu {
-    width: 100;
-    margin-top: 2rem;
+  width: 100;
+  margin-top: 2rem;
 }
 
 .sidebar .side-menu li {
-    margin: 0.5rem 0; /*Make space of each li tag*/
-    height: 3rem;
-    background-color: transparent;
+  margin: 0.5rem 0; /*Make space of each li tag*/
+  height: 3rem;
+  background-color: transparent;
 }
 
 .sidebar .side-menu li.active {
-    border-left: var(--success) 6px solid;
-    background-color: var(--dark);
-    transition: all 0.3s ease-in;
+  border-left: var(--success) 6px solid;
+  background-color: var(--dark);
+  transition: all 0.3s ease-in;
 }
 
 .sidebar .side-menu li a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    white-space: nowrap;
-    overflow-x: hidden;
-    transition: 0.3s ease;
-    color: var(--dark);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  transition: 0.3s ease;
+  color: var(--dark);
 }
 
 .sidebar .side-menu li.active a {
-    color: var(--success);
+  color: var(--success);
 }
 
 .sidebar.close .side-menu li a {
-    width: calc(80px - 12px);
-    transition: all 0.3s ease-in;
+  width: calc(80px - 12px);
+  transition: all 0.3s ease-in;
 }
 
 .sidebar .side-menu li a .bx {
-    min-width: calc(80px - 20px);
-    display: flex;
-    justify-content: center;
-    font-size: 1.7rem;
+  min-width: calc(80px - 20px);
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
 }
 
 .side-menu li a.logout {
-    color: var(--success);
+  color: var(--success);
 }
 
 /*Content Start*/
 .content {
-    position: relative;
-    width: calc(100%-260px);
-    left: 260px;
-    transition: all 0.3s ease;
+  position: relative;
+  width: calc(100%-260px);
+  left: 260px;
+  transition: all 0.3s ease;
 }
 /*Code to move both the sidebar and the content when sidbar is closed*/
 .sidebar.close ~ .content {
-    width: calc(100%-60px);
-    left: 60px;
+  width: calc(100%-60px);
+  left: 60px;
 }
 
 .content nav {
-    height: 56px;
-    background-color: var(--light);
-    padding: 2.5rem 1rem;
-    display: flex;
-    align-items: center;
-    grid-gap: 24px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 5;
+  height: 56px;
+  background-color: var(--light);
+  padding: 2.5rem 1rem;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
 .content nav a {
-    color: var(--dark);
+  color: var(--dark);
 }
 
 .content nav .bx.bx-menu {
-    cursor: pointer;
-    color: var(--dark);
-    font-size: 2rem;
+  cursor: pointer;
+  color: var(--dark);
+  font-size: 2rem;
 }
 
 .content nav form {
-    max-width: 850px; /*600px*/
-    width: 100%;
-    height: auto;
+  max-width: 850px; /*600px*/
+  width: 100%;
+  height: auto;
 }
 
 .content nav form .form-input {
-    display: flex;
-    align-items: center;
-    height: 46px;
+  display: flex;
+  align-items: center;
+  height: 46px;
 }
 
 .content nav form .form-input input {
-    flex-grow: 1; /* Input should grow and take up available space*/
-    padding: 0 16px; /* 0 padding on top and bottom and 16px padding on left and roght*/
-    height: 100%;
-    border: none;
-    background-color: var(--grey);
-    border-radius: 36px 0 0 36px; /* Create rounded corners for the input elements*/
-    outline: none;
-    color: var(--dark);
-    width: 100%;
-    font-family: inherit;
+  flex-grow: 1; /* Input should grow and take up available space*/
+  padding: 0 16px; /* 0 padding on top and bottom and 16px padding on left and roght*/
+  height: 100%;
+  border: none;
+  background-color: var(--grey);
+  border-radius: 36px 0 0 36px; /* Create rounded corners for the input elements*/
+  outline: none;
+  color: var(--dark);
+  width: 100%;
+  font-family: inherit;
 }
 
 .content nav form .form-input button {
-    width: 80px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--success);
-    color: var(--light);
-    font-size: 18px;
-    outline: none;
-    border: none;
-    border-radius: 0 36px 36px 0;
-    cursor: pointer;
+  width: 80px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--success);
+  color: var(--light);
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 0 36px 36px 0;
+  cursor: pointer;
 }
 
 .content nav form .form-input button .bx-search {
-    color: #fff;
+  color: #fff;
 }
 
 .content nav .notification {
-    font-size: 20px;
-    position: relative;
+  font-size: 20px;
+  position: relative;
 }
 
 .content nav .notification span {
-    position: absolute;
-    top: -6px;
-    width: 26px;
-    height: 20px;
-    background-color: var(--danger);
-    border-radius: 50%;
-    color: var(--light);
-    border: 2px solid var(--light);
-    font-weight: 700;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  top: -6px;
+  width: 26px;
+  height: 20px;
+  background-color: var(--danger);
+  border-radius: 50%;
+  color: var(--light);
+  border: 2px solid var(--light);
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
 }
 /*Content Ends*/
 
 /*Main Start*/
 main {
-    width: 100%;
-    padding: 2.2rem 1rem;
-    max-height: calc(100vh - 65px);
+  width: 100%;
+  padding: 2.2rem 1rem;
+  max-height: calc(100vh - 65px);
 }
 
 main .header h1 {
-    font-size: 2.4rem;
-    font-weight: 600;
-    margin-bottom: 0.8rem;
-    color: var(--dark);
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--dark);
 }
 
 main .breadcrumb {
-    display: flex;
-    align-items: center;
-    grid-gap: 1.2rem;
+  display: flex;
+  align-items: center;
+  grid-gap: 1.2rem;
 }
 
 /* main .breadcrumb li {
@@ -253,74 +252,191 @@ main .breadcrumb {
 } */
 
 main .breadcrumb li a {
-    color: var(--dark);
-    pointer-events: none;
+  color: var(--dark);
+  pointer-events: none;
 }
 
 main .breadcrumb li a.active {
-    color: var(--success);
+  color: var(--success);
 }
 
 main .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 0fr));
-    grid-gap: 1rem;
-    margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 0fr));
+  grid-gap: 1rem;
+  margin-top: 3rem;
 }
 
 main .cards li {
-    padding: 1.5rem;
-    background-color: var(--light);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    grid-gap: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
+  padding: 1.5rem;
+  background-color: var(--light);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
 main .cards li:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 main .cards li .bx {
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 10px;
-    font-size: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 10px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-    
+
 main .cards li:nth-child(1) .bx {
-    background-color: var(--light-primary);
-    color: var(--primary);
+  background-color: var(--light-primary);
+  color: var(--primary);
 }
 
 main .cards li:nth-child(2) .bx {
-    background-color: var(--light-warning);
-    color: var(--warning);
+  background-color: var(--light-warning);
+  color: var(--warning);
 }
 
 main .cards li:nth-child(3) .bx {
-    background-color: var(--light-danger);
-    color: var(--danger);
+  background-color: var(--light-danger);
+  color: var(--danger);
 }
 
 main .cards li:nth-child(4) .bx {
-    background-color: var(--light-success);
-    color: var(--success);
+  background-color: var(--light-success);
+  color: var(--success);
 }
 
 main .cards li .info h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--dark);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
 }
 
 main .cards li .info p {
-    color: var(--dark);
+  color: var(--dark);
 }
 
 /*Main End*/
+
+/*Order Details Start*/
+.content main .bottom_data {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  grid-gap: 24px;
+  margin-top: 24px;
+  color: var(--dark);
+}
+
+.content main .bottom_data > div {
+  border-radius: 10px;
+  background-color: var(--light);
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+main .bottom_data .header {
+  display: flex;
+  align-items: center;
+  grid-gap: 16px;
+  margin-bottom: 24px;
+}
+
+main .bottom_data .header h3 {
+  font-size: 24px;
+  font-weight: 600px;
+}
+
+main .bottom_data .orders {
+  flex-grow: 0.2;
+  flex-basis: 500;
+}
+
+main .bottom_data .orders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main .bottom_data .orders table th {
+  padding: 12px 10px;
+  font-size: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--grey);
+  background-color: var(--grey);
+  color: var(--dark);
+}
+
+main .bottom_data .orders table td {
+  padding: 12px 10px;
+}
+
+.content main .bottom_data .orders table .img_content {
+  display: flex;
+  align-items: center;
+  grid-gap: 12px;
+  padding-left: 6px;
+}
+
+.content main .bottom_data table td img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content main .bottom_data table tbody tr {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.content main .bottom_data table tbody tr:nth-child(even) {
+  background-color: var(--grey);
+}
+
+.content main .bottom_data .orders table td .status {
+  font-size: 10px;
+  padding: 6px 16px;
+  color: var(--light);
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.content main .bottom_data .orders table td .status.completed {
+  background-color: var(--success);
+}
+
+.content main .bottom_data .orders table td .status.pending {
+  background-color: var(--warning);
+}
+
+.content main .bottom_data .orders table td .status.processing {
+  background-color: var(--primary);
+}
+
+/* main .bottom_data .reminders {
+  flex-grow: 0.2;
+  flex-basis: 300px;
+} */
+
+main .bottom_data .reminders .task_list {
+  width: 100%;
+}
+
+main .bottom_data .reminders .task_list li {
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: var(--grey);
+  padding: 14px 5px;
+  border-radius: 05px;
+  font-display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*Order Details Stop*/

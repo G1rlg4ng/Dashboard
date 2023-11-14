@@ -1,114 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/admin.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--Boxicons library-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--Boxicons library-->
     <script defer src="js/admin.js"></script>
     <title>Admin Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--======Sidebar Start======-->
     <div class="sidebar">
-        <a href="#">
-            <span>Code</span>Bunny
-            <!-- Code to make bunny black
+      <a href="#">
+        <span>Code</span>Bunny
+        <!-- Code to make bunny black
             <span>Code</span><span style="color: black;">Bunny</span> -->
-        </a>
-        <ul class="side-menu"> 
-            <!--The classes represent an icon from Boxicons libray -->
-            <li class="active">
-                <a href="#"><i class="bx bxs-dashboard"></i>Dashboard</a>
-            </li>
-            <li>
-                <a href="#"><i class="bx bx-video"></i>Content</a>
-            </li>
-            <li>
-                <a href="#"><i class="bx bx-bar-chart"></i>Analytics</a>
-            </li>
-            <li>
-                <a href="#"><i class="bx bx-comment-detail"></i>Comments</a>
-            </li>
-            <li>
-                <a href="#"><i class="bx bx-customize"></i>Customize</a>
-            </li>
-            <li>
-                <a href="#"><i class="bx bx-group"></i>Users</a>
-            </li>
-            <li>
-                <a href="#"><i class="bx bx-cog"></i>Settings</a>
-            </li>
+      </a>
+      <ul class="side-menu">
+        <!--The classes represent an icon from Boxicons libray -->
+        <li class="active">
+          <a href="#"><i class="bx bxs-dashboard"></i>Dashboard</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-video"></i>Content</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-bar-chart"></i>Analytics</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-comment-detail"></i>Comments</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-customize"></i>Customize</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-group"></i>Users</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bx-cog"></i>Settings</a>
+        </li>
+      </ul>
+      <div class="side-menu">
+        <ul>
+          <li>
+            <a href="#" class="logout"
+              ><i class="bx bx-moon"></i>Dark / Light</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="bx bx-log-out-circle"></i>Logout</a>
+          </li>
         </ul>
-        <div class="side-menu">
-            <ul>
-                <li><a href="#" class="logout"><i class="bx bx-moon"></i>Dark / Light</a></li>
-                <li><a href="#"><i class="bx bx-log-out-circle"></i>Logout</a></li>
-            </ul>
-        </div>
+      </div>
     </div>
     <!--======Sidebar End======-->
 
-     <!--======Content Start======-->
+    <!--======Content Start======-->
     <div class="content">
-        <nav>
-            <i class="bx bx-menu"></i>
-            <form action="#">
-                <div class="form-input">
-                    <input type="search" placeholder="Enter your search...">
-                    <button type="submit"><i class="bx bx-search"></i></button>
-                </div>
-            </form>
-            <a href="#" class="notification">
-                <i class="bx bx-bell"></i>
-                <span>5</span>
-            </a>
-        </nav>
-    <!--======Main Start======-->
-    <main> <!--Main represents the dominant content of the <body> of a document-->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Enter your search..." />
+            <button type="submit"><i class="bx bx-search"></i></button>
+          </div>
+        </form>
+        <a href="#" class="notification">
+          <i class="bx bx-bell"></i>
+          <span>5</span>
+        </a>
+      </nav>
+      <!--======Main Start======-->
+      <main>
+        <!--Main represents the dominant content of the <body> of a document-->
         <div class="header">
-            <h1>Dashboard</h1>
-            <ul class="breadcrumb">
-                <li><a href="#" class="active">Analytics</a></li>
-                /
-                <li><a href="#">Content</a></li>
-            </ul>
+          <h1>Dashboard</h1>
+          <ul class="breadcrumb">
+            <li><a href="#" class="active">Analytics</a></li>
+            /
+            <li><a href="#">Content</a></li>
+          </ul>
         </div>
         <!--======Cards Start======-->
         <ul class="cards">
-            <li>
-                <i class="bx bx-group"></i>
-                <span class="info">
-                <h3>8,871</h3>
-                <p>New Users</p>
-                </span>
-            </li>
-            <li>
-                <i class="bx bx-cart-add"></i>
-                <span class="info">
-                <h3>8,960</h3>
-                <p>Total Orders</p>
-                </span>
-            </li>
-            <li>
-                <i class="bx bx-line-chart"></i>
-                <span class="info">
-                <h3>5,370</h3>
-                <p>Site Visits</p>
-                </span>
-            </li>
-            <li>
-                <i class="bx bx-dollar-circle"></i>
-                <span class="info">
-                <h3>$6,185</h3>
-                <p>This Month</p>
-                </span>
-            </li>
+          <li>
+            <i class="bx bx-group"></i>
+            <span class="info">
+              <h3>8,871</h3>
+              <p>New Users</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-cart-add"></i>
+            <span class="info">
+              <h3>8,960</h3>
+              <p>Total Orders</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-line-chart"></i>
+            <span class="info">
+              <h3>5,370</h3>
+              <p>Site Visits</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-dollar-circle"></i>
+            <span class="info">
+              <h3>$6,185</h3>
+              <p>This Month</p>
+            </span>
+          </li>
         </ul>
         <!--======Cards Stop======-->
-    </main>
-     <!--======Main Stop======-->
+
+        <!--======Bottom Data Start======-->
+        <div class="bottom_data">
+          <div class="orders">
+            <div class="header">
+              <h3>Recent Orders</h3>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12345</td>
+                  <td class="img_content">
+                    <img src="./Images/jane.jpg" alt="" />
+                    <p>Jane Doe</p>
+                  </td>
+                  <td>jdoe@gmail.com</td>
+                  <td>14th nov 2023</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>27902</td>
+                  <td class="img_content">
+                    <img src="./Images/john.jpg" alt="" />
+                    <p>John Doe</p>
+                  </td>
+                  <td>johndoe@gmail.com</td>
+                  <td>10 nov 2021</td>
+                  <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>90876</td>
+                  <td class="img_content">
+                    <img src="./Images/mayumi.jpg" alt="" />
+                    <p>Lexy Vee</p>
+                  </td>
+                  <td>lexy@gmail.com</td>
+                  <td>14th oct 2023</td>
+                  <td><span class="status processing">Processing</span></td>
+                </tr>
+                <tr>
+                  <td>12345</td>
+                  <td class="img_content">
+                    <img src="./Images/ringo.jpg" alt="" />
+                    <p>Alex Saint</p>
+                  </td>
+                  <td>saint@gmail.com</td>
+                  <td>14th nov 2023</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>12345</td>
+                  <td class="img_content">
+                    <img src="./Images/lesley.jpg" alt="" />
+                    <p>Lesley Jacobs</p>
+                  </td>
+                  <td>jlesley@gmail.com</td>
+                  <td>14th nov 2023</td>
+                  <td><span class="status completed">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--======Reminder Start======-->
+          <div class="reminders">
+            <div class="header">
+              <h3>Reminders</h3>
+            </div>
+            <ul class="task_list">
+              <li class="completed">
+                <div class="task_title">
+                  <i class="bx bx-check-circle"></i>
+                  <p>Start Meeting</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="completed">
+                <div class="task_title">
+                  <i class="bx bx-check-circle"></i>
+                  <p>Analyze Site</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="uncomplete">
+                <div class="task_title">
+                  <i class="bx bx-x-circle"></i>
+                  <p>Recruit New Members</p>
+                </div>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+            </ul>
+          </div>
+          <!--======Reminder Stop======-->
+        </div>
+        <!--======Bottom Data Stop======-->
+      </main>
+      <!--======Main Stop======-->
     </div>
-      <!--======Content Stop======-->
-</body>
+    <!--======Content Stop======-->
+  </body>
 </html>
