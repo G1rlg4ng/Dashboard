@@ -339,7 +339,7 @@ main .cards li .info p {
   border-radius: 10px;
   background-color: var(--light);
   padding: 24px;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 main .bottom_data .header {
