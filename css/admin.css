@@ -23,7 +23,7 @@
 }
 
 body {
-  font-family: "poppins", sans-serif; /*sans0serif is an alternative*/
+  font-family: "poppins", sans-serif; /*sans-serif is an alternative*/
 }
 
 .bx {
@@ -64,9 +64,9 @@ body {
   transition: all 0.3s ease-in;
 }
 
-.sidebar::-webkit-scrollbar {
+/* .sidebar::-webkit-scrollbar { /*Non-standard. Do not use in production site
   display: none;
-}
+} */
 
 .sidebar.close {
   width: 60px;
@@ -101,7 +101,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 1rem;
-  white-space: nowrap;
+  white-space: nowrap; /* Specifies how white space is handled*/
   overflow-x: hidden;
   transition: 0.3s ease;
   color: var(--dark);
@@ -129,12 +129,12 @@ body {
 
 /*Content Start*/
 .content {
-  position: relative;
+  position: relative; /* How an element is positioned in a document*/
   width: calc(100%-260px);
   left: 260px;
   transition: all 0.3s ease;
 }
-/*Code to move both the sidebar and the content when sidbar is closed*/
+/*Code to move both the sidebar and the content when sidebar is closed*/
 .sidebar.close ~ .content {
   width: calc(100%-60px);
   left: 60px;
@@ -150,7 +150,7 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 5; /* Sets the order of positioned elements and its descendants*/
 }
 
 .content nav a {
@@ -182,7 +182,7 @@ body {
   border: none;
   background-color: var(--grey);
   border-radius: 36px 0 0 36px; /* Create rounded corners for the input elements*/
-  outline: none;
+  outline: none; /*Something like a border*/
   color: var(--dark);
   width: 100%;
   font-family: inherit;
@@ -248,9 +248,9 @@ main .breadcrumb {
   grid-gap: 1.2rem;
 }
 
-/* main .breadcrumb li {
-    color: var(--dark);
-} */
+main .breadcrumb li {
+  color: var(--dark);
+}
 
 main .breadcrumb li a {
   color: var(--dark);
@@ -263,7 +263,7 @@ main .breadcrumb li a.active {
 
 main .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 0fr));
+  grid-template-columns: repeat(auto-fit, minmax(235px, 0fr));
   grid-gap: 1rem;
   margin-top: 3rem;
 }
@@ -328,7 +328,7 @@ main .cards li .info p {
 /*Order Details Start*/
 .content main .bottom_data {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*sets whether flex items are forced onto one line or can wrap onto multiple lines*/
   width: 100%;
   grid-gap: 24px;
   margin-top: 24px;
@@ -336,6 +336,7 @@ main .cards li .info p {
 }
 
 .content main .bottom_data > div {
+  /*select the direct class div element of the class bottom_data*/
   border-radius: 10px;
   background-color: var(--light);
   padding: 24px;
@@ -356,7 +357,7 @@ main .bottom_data .header h3 {
 
 main .bottom_data .orders {
   flex-grow: 0.2;
-  flex-basis: 500;
+  flex-basis: 500; /* Sets initial main size of a flex item*/
 }
 
 main .bottom_data .orders table {
@@ -422,7 +423,7 @@ main .bottom_data .orders table td {
 
 main .bottom_data .reminders {
   flex-grow: 0.2;
-  flex-basis: 300px;
+  flex-basis: 120px;
 }
 
 main .bottom_data .reminders .task_list {
@@ -449,7 +450,7 @@ main .bottom_data .reminders .task_list li .task_title p {
   margin-left: 6px;
 }
 
-main .bottom_data .reminders .task_list li .bx {
+main .bottom_data .reminders .task_list li {
   cursor: pointer;
 }
 
