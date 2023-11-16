@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; //Activate strict mode
 
 //Links
 const sideLInksEl = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
@@ -7,10 +7,10 @@ sideLInksEl.forEach((links) => {
     const li = links.parentElement;
     links.addEventListener("click", () => {
         sideLInksEl.forEach((i) => {
-            i.parentElement.classList.remove("active");
-        }); 
+            i.parentElement.classList.remove("active"); // Ensure only one link will have the class active
+        }); //classList allows manipulation of element's class content
         li.classList.add('active');
-    });  
+    });
 });
 
 //sidebar
@@ -41,7 +41,7 @@ searchButton.addEventListener("click", function (e) {
 });
 //resize
 window.addEventListener("resize", () => {
-    if(window.innerWidth < 768) {
+    if (window.innerWidth < 768) {
         sideBarEl.classList.add("close");
     } else {
         sideBarEl.classList.remove("close");
@@ -55,7 +55,7 @@ const darkIcon = document.querySelector(".side-menu ul li .bx.bx-moon");
 darkEl.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
-    if(document.body.classList.contains("dark")) {
+    if (document.body.classList.contains("dark")) {
         darkIcon.classList.replace("bx-moon", "bx-sun");
     } else {
         darkIcon.classList.replace("bx-sun", "bx-moon");
